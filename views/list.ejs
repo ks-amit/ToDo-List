@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ToDo List</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script src="todolist.js"></script>
+<link href="formcss.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+	</div>
+		<div class="table-title">
+			<h1>ToDo LIST</h1><br>
+		</div>
+		<table class="table-fill">
+		<thead>
+		<tr>
+		<th class="text-left" align="center">ITEM</th>
+		<th class="text-left" align="center">DEADLINE</th>
+		</tr>
+		</thead>
+		<tbody class="table-hover">
+			<% for(var i = 0; i < todos.length; i++){ %>
+			<tr class="tablerow" >
+				<td id="text1" class="text-left"><%= todos[i].item %></td>
+				<td id="text2" class="text-left"><%= todos[i].dead %></td>
+			</tr>
+			<% } %>	
+		</tbody>
+		</table>
+	<div id="add" class="user">
+		<form id="myform" class="form">
+        	<div class="form__group">
+        		<label style="font-size: 25px;">Job:</label>
+            	<input type="text" id="item1" name="item" placeholder="ToDo Item" class="form__input" required />
+        	</div>
+        	
+        	<div style="margin-top: 30px;" class="form__group">
+        		<label style="font-size: 25px;">Deadline:</label>
+            	<input type="date" id="item2" name="dead" placeholder="Deadline" class="form__input" />
+        	</div>
+        
+        	<button style="margin-top: 30px;" class="btn" type="submit">INSERT</button>
+    	</form>
+	</div>
+</div>
+
+<div id="copyright" class="container">
+	<p> Photos by <a href="http://fotogrph.com/">Fotogrph</a> | <label style="color: white; font-size: 20px;">MADE BY AMIT K S</label> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>
